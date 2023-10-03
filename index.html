@@ -9,18 +9,31 @@
   <body>
     <div class="clock">
       <div class="clock__hours">
-        <div class="clock-hands__non-visible"></div>
-        <div class="clock-hands__visible"></div>
+        <div class="clock-hours__non-visible"></div>
+        <div class="clock-hours__visible"></div>
       </div>
       <div class="clock__minutes">
-        <div class="clock-hands__non-visible"></div>
-        <div class="clock-hands__visible"></div>
+        <div class="clock-minutes__non-visible"></div>
+        <div class="clock-minutes__visible"></div>
       </div>
       <div class="clock__shaft"></div>
     </div>
     <div class="time">
       <h2 class="time-digital"></h2>
     </div>
+
+    <form class="logIn-form hidden">
+      <input
+        class="logIn-input"
+        type="text"
+        maxlength="15"
+        required
+        placeholder="What is your name?"
+      />
+      <button>Log In</button>
+    </form>
+    <h1 class="greeting hidden"></h1>
     <script src="js/clock.js"></script>
+    <script src="js/logIn.js"></script>
   </body>
 </html>
