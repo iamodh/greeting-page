@@ -17,7 +17,7 @@ function getClock() {
 getClock();
 setInterval(getClock, 1000);
 
-//
+// rotate clock hands along the time
 function rotateHands(date) {
   const hourRotation = 360 * ((date.getHours() % 12) / 12);
   const minuteRotation = 360 * (date.getMinutes() / 60);
