@@ -2,6 +2,7 @@ const time = document.querySelector(".time-digital");
 const hourHand = document.querySelector(".clock__hours");
 const minuteHand = document.querySelector(".clock__minutes");
 
+// set ditital clock time
 function getClock() {
   const date = new Date();
   const hours = String(date.getHours()).padStart(2, "0");
@@ -12,6 +13,11 @@ function getClock() {
   rotateHands(date);
 }
 
+// initialize time and get clock per 1s
+getClock();
+setInterval(getClock, 1000);
+
+//
 function rotateHands(date) {
   const hourRotation = 360 * ((date.getHours() % 12) / 12);
   const minuteRotation = 360 * (date.getMinutes() / 60);
@@ -19,6 +25,3 @@ function rotateHands(date) {
   hourHand.style.transform = `rotate(${hourRotation}deg)`;
   minuteHand.style.transform = `rotate(${minuteRotation}deg)`;
 }
-
-getClock();
-setInterval(getClock, 1000);
