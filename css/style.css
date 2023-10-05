@@ -1,91 +1,134 @@
+@import "clock.css";
+@import "reset.css";
+
+* {
+  font-family: "Karla", sans-serif;
+  box-sizing: border-box;
+}
+
 body {
   background-color: forestgreen;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.weather-container {
+  width: 33%;
+  height: 100%;
+}
+
+.weather {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main-info-container {
+  width: 33%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.clock {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: whitesmoke;
-  border: 5px solid black;
-  position: relative;
-  margin-top: 40px;
-}
-
-.clock__hours {
-  width: 100px;
-  height: 6px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  rotate: z -90deg;
+.todo-list-container {
+  width: 33%;
   display: flex;
-  border: none;
-  /* animation: clockHandsRotate 10s linear infinite; */
-  z-index: 1;
-}
-
-.clock__minutes {
-  width: 180px;
-  height: 6px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  rotate: z -90deg;
-  display: flex;
-  border: none;
-  /* animation: clockHandsRotate 5s linear infinite; */
-  z-index: 0;
-}
-
-.clock-hours__non-visible,
-.clock-minutes__non-visible {
   height: 100%;
-  width: 50%;
-  background-color: transparent;
-}
-
-.clock-hours__visible,
-.clock-minutes__visible {
-  height: 100%;
-  width: 50%;
-  background-color: black;
-  border-radius: 10px;
-}
-
-.clock-hours__visible {
-  background-color: #f74445;
-}
-
-@keyframes clockHandsRotate {
-  0% {
-    rotate: z 0;
-  }
-  50% {
-    rotate: z 180deg;
-  }
-  100% {
-    rotate: z 360deg;
-  }
-}
-
-.clock__shaft {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: black;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
-  z-index: 2;
+  justify-content: center;
+  align-items: center;
 }
 
 .hidden {
   display: none;
+}
+
+.clock {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+
+.time {
+  margin-bottom: 60px;
+}
+
+.time-digital {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.greeting {
+  width: 100vw;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.todo-input {
+  width: 200px;
+  height: 24px;
+  border: none;
+}
+
+.todo-input::placeholder {
+  padding-left: 2px;
+}
+
+.todo-button {
+  height: 24px;
+  border: none;
+}
+
+.todo-form {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.todo-list {
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 8px;
+}
+
+.todo-list li {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  border-radius: 1px;
+  margin-bottom: 4px;
+}
+
+.todo-list li button {
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 4px;
+  border: none;
+  background: none;
+}
+
+.login-form {
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.login-input {
+  width: 200px;
+  height: 24px;
+  border: none;
+}
+
+.login-button {
+  height: 24px;
+  border: none;
+}
+
+.login-input::placeholder {
+  padding-left: 2px;
 }

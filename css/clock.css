@@ -1,0 +1,79 @@
+.clock {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  border: 5px solid black;
+  position: relative;
+}
+
+.clock__hours {
+  width: 100px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  rotate: z -90deg;
+  display: flex;
+  border: none;
+  /* animation: clockHandsRotate 10s linear infinite; */
+  z-index: 1;
+}
+
+.clock__minutes {
+  width: 180px;
+  height: 6px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  rotate: z -90deg;
+  display: flex;
+  border: none;
+  /* animation: clockHandsRotate 5s linear infinite; */
+  z-index: 0;
+}
+
+.clock-hours__non-visible,
+.clock-minutes__non-visible {
+  height: 100%;
+  width: 50%;
+  background-color: transparent;
+}
+
+.clock-hours__visible,
+.clock-minutes__visible {
+  height: 100%;
+  width: 50%;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.clock-hours__visible {
+  background-color: #f74445;
+}
+
+@keyframes clockHandsRotate {
+  0% {
+    rotate: z 0;
+  }
+  50% {
+    rotate: z 180deg;
+  }
+  100% {
+    rotate: z 360deg;
+  }
+}
+
+.clock__shaft {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+}
